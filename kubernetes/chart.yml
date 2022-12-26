@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chart
+  template:
+    metadata:
+      labels:
+        app: chart
+    spec:
+      containers:
+      - name: chart
+        image: <Image>
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5155
