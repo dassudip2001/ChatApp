@@ -17,3 +17,5 @@ app.Run();
 
 // chart application
 public record MassageRequest(string Player ,string Text);
+// send with time
+// public record MassageResponse(string Player ,string Text,DateTimeOffset Time);
